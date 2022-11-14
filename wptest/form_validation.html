@@ -1,0 +1,59 @@
+<html> 
+    <head> 
+        <link rel="stylesheet" type="text/css" href="D:\CODE\wptest\p13.css">
+    </head>
+    <body> 
+        <div class="card" draggable-object>
+            <center>
+                <form name="myform">    
+                    <h1>Login Page</h1>
+                    <hr>
+                        Email-ID :-
+                        <label>     
+                            <input type="text" class="input" name="email" placeholder="EMAIL"/>          
+                        </label>  
+                        <br><br>
+                        Password :-     
+                        <label>     
+                            <input type="password" class="input" name="password" placeholder="PASSWORD"/>        
+                        </label>  
+                        <br><br>
+                        Phone-No :-  
+                        <label>     
+                            <input type="text" class="input" name="Phone_No" placeholder="Phone_no"/>      
+                        </label>
+                        <br><br>    
+                        <button type="submit" onclick="validateForm()">submit</button> 
+                </form> 
+            </center> 
+            <script>
+                function validateForm()
+                {
+                    var test = document.forms["myform"]["Phone_No"].value;
+                    if(test ==null|| test =="")
+                    {
+                        alert("Please enter phone no");
+                        return false;
+                    }
+                    else if(test.length<6)
+                    {  
+                        alert("Password must be at least 6 characters long.");  
+                        return false;  
+                    }  
+                    var test1 = document.forms["myform"]["email"].value;
+                    if(test1 ==null|| test1 =="")
+                    {
+                        alert("Please enter Email-ID");
+                        return false;
+                    }
+                    var test2 = document.forms["myform"]["password"].value;
+                    if(test2 ==null|| test2 =="")
+                    {
+                        alert("Please enter Password");
+                        return false;
+                    }
+                }   
+            </script>
+        </div> 
+    </body> 
+</html>

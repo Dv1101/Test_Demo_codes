@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Practical</title>
+        <link rel="stylesheet" type="text/css" href="D:\CODE\wptest\p12.css">
+    </head>
+    <body>
+        <h1>Calculate Sum of 1 to N numbers </h1>
+        <button onclick="calculate()">calculate_SUM</button>
+        <br>
+        <br>
+        <h1>Check whether Number is Prime or Not </h1>
+        <button onclick="prime()">prime number</button>
+        <script>
+            function calculate(){
+                let n = prompt("enter n");
+                let i=0;
+                let sum=0;
+                for(i = 0; i <=n; i++)
+                {
+                    sum=sum+i;
+                }
+                window.alert(sum);
+            }
+            
+            function prime()
+            { 
+                var string=prompt("enter number");  
+                var flag = true;
+                string = parseInt(string);
+                for(i = 2; i <= string - 1; i++)
+                if (string % i == 0) 
+                {
+                    flag = false;
+                    break;
+                }
+        
+                if (flag == true)
+                   alert(string + " is prime");
+                else
+                   alert(string + " is not prime");
+            } 
+        </script>
+    </body>
+</html>
